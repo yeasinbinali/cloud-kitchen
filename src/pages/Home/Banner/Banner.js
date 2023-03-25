@@ -5,7 +5,7 @@ import banner from "../../../images/banner/banner.jpeg";
 const Banner = () => {
   return (
     <div className="md:flex justify-around items-center my-10">
-      <div className="lg:w-1/3 md:w-1/2 p-2">
+      <div className="lg:w-1/3 md:w-1/2 p-3">
         <h1 className="text-5xl font-bold">Could Kitchen</h1>
         <p className="my-5 text-justify">
           At CloudKitchens, we help restaurateurs succeed in delivery. Our ghost
@@ -17,7 +17,7 @@ const Banner = () => {
         </button>
       </div>
       <div>
-        <img src={banner} alt=""></img>
+        <img className='p-3' src={banner} alt=""></img>
       </div>
     </div>
   );

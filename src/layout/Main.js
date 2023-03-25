@@ -7,6 +7,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
+            <hr className='mt-3 bg-orange-900'></hr>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
