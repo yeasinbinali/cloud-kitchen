@@ -2,55 +2,64 @@
     {
         "id": 1,
         "img": "https://i.ibb.co/wcSJ0RT/food1.jpg",
-        "name": "Noodles",
-        "price": 12
+        "name": "Spicy Noodles",
+        "price": 12,
+        "details": "To make this easy recipe, begin with par-boiling the noodles. Once done, drain the excess water and keep it aside. In the meantime, heat a pan over a medium flame. Once the oil is sufficiently hot, add the ginger-garlic paste and fry for some time. If you like to make it more delicious, add some finely chopped green chillies. You can also use chillies soaked in vinegar. Then add the onions, beans and green chillies in the same pan and saute for a minute or two. Add the carrots, cabbage, salt, pepper powder, soy sauce and Ajinomoto. Stir-fry the ingredients for some time. Once done, add the boiled noodles and break the eggs into the pan. Mix well and cook for a few minutes. If you like smoky flavours, stir the veggies mix on a high flame. Cover the pan with a lid and allow it to cook for around 2-3 minutes. Once done, transfer the dish to a serving bowl and garnish it with coriander leaves. Serve hot and pair it with a spicy gravy of your choice. Make sure you try this recipe, rate it and let us know how it turned out to be."
     },
     {
         "id": 2,
         "img": "https://i.ibb.co/kmxZ6J2/food2.jpg",
         "name": "Chicken Burger",
-        "price": 15
+        "price": 15, 
+        "details": "In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide. Lay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill. Lay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute. Spread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place.  If you want absolute bacteria safety, you need to cook your burgers to 160°. This recipe will keep them moist."
     },
     {
         "id": 3,
         "img": "https://i.ibb.co/vJGBNLN/food3.jpg",
         "name": "Masala Pasta",
-        "price": 8
+        "price": 8,
+        "details": "Pasta is the perfect blank canvas that allows you to experiment while also fulfilling your wildest cooking dreams. From simple dishes like pesto pasta to labors of love like classic lasagna, there's an endless number of pasta dishes to try. But these 15 must-make recipes — including bolognese, cacio e pepe and carbonara — are the essential dishes every home cook should have in their repertoire. Cheese lovers rejoice! This baked ziti has not one but three types of cheese — provolone, mozzarella, and Parmesan — loaded in it for a gooey, melty masterpiece. This simple yet delicious pasta dish is bound to satisfy even the pickiest eater in your household. Containing only butter, heavy cream, Romano cheese, Parmesan cheese, fettuccine pasta, and a dash of garlic salt, it's simple but oh so delicious. Revel in the meaty taste of bacon in this flavorful carbonara recipe. It's ready in just 40 minutes and makes a whopping 8 helpings making it perfect for an easy entertaining dinner."
     },
     {
         "id": 4,
         "img": "https://i.ibb.co/zs8pLjk/food4.jpg",
         "name": "Pizza Dough",
-        "price": 17
+        "price": 17, 
+        "details": "Place the warm water in the large bowl of a heavy duty stand mixer. Sprinkle the yeast over the warm water and let it sit for 5 minutes until the yeast is dissolved. After 5 minutes stir if the yeast hasn't dissolved completely. The yeast should begin to foam or bloom, indicating that the yeast is still active and alive. Add the flour, salt, sugar, and olive oil, and using the mixing paddle attachment, mix on low speed for a minute. Then replace the mixing paddle with the dough hook attachment. Knead the pizza dough on low to medium speed using the dough hook about 7-10 minutes. If you don't have a mixer, you can mix the ingredients together and knead them by hand. The dough should be a little sticky, or tacky to the touch. If it's too wet, sprinkle in a little more flour. Spread a thin layer of olive oil over the inside of a large bowl. Place the pizza dough in the bowl and turn it around so that it gets coated with the oil. At this point you can choose how long you want the dough to ferment and rise. A slow fermentation (24 hours in the fridge) will result in more complex flavors in the dough. A quick fermentation (1 1/2 hours in a warm place) will allow the dough to rise sufficiently to work with."
     },
     {
         "id": 5,
         "img": "https://i.ibb.co/r5CC0Cr/food5.jpg",
         "name": "Fried Chicken",
-        "price": 10
+        "price": 10, 
+        "details": "Combine the flour, paprika, salt, and pepper in a zip-top bag. Seal the bag and shake until well-combined. Pour buttermilk into a shallow bowl, then dip the chicken (on both sides) until it's completely soaked in buttermilk. Place the soaked chicken in the bag with flour mixture, seal, and shake well to coat. Transfer the coated chicken to a baking sheet, and cover. Allow the flour coating to become a paste-like consistency. Pour the oil in a skillet and bring it to high heat. Brown the chicken on both sides, then reduce the heat, cover the skillet, and cook for about 30 minutes. Remove the cover, return the heat to high, and fry until extra crispy. Drain the chicken on paper towels. Let the fried chicken cool before storage to prevent bacteria growth. Place it in a shallow airtight container or wrap it tightly in aluminum foil, then refrigerate for up to four days. Reheat in the microwave or in the oven. Dip chicken pieces in buttermilk then, a few at a time, put them in the bag with the flour, seal the bag and shake to coat well."
     },
     {
         "id": 6,
         "img": "https://i.ibb.co/zGhh8gw/food6.jpg",
         "name": "Chicken Biriyani",
-        "price": 19
+        "price": 19,
+        "details": "To make a delightful chicken biryani dish firstly soak saffron in water to prepare saffron water (One tsp saffron can be soaked in 1/4 cup water). Next, mix kewra drops in water and mix well to make kewra water. Set them aside for later usage. Now chop the onion and coriander leaves and keep them aside. Meanwhile, heat refined oil in a deep bottomed pan. Once the oil is hot enough, add cumin seeds, bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. Then, add chopped onion to it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to taste, ginger garlic paste, red chilli powder and green chilli paste. Mix well all the spices and cook for 2-3 minutes. Then, add hung curd into it and give a mix. Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint leaves. Add kewra water, rose water and saffron water in it. Cook till the chicken is tender. Then add 1 cup cooked rice and spread evenly. Then add saffron water and pour ghee over it. You can now cook the dish without the lid or cover it with a lid to give a dum-effect due to the steam formation. Cook for 15-20 minutes with a closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot chicken biryani with raita of your choice. Enjoy!"
     },
     {
         "id": 7,
         "img": "https://i.ibb.co/FqDWkwM/food7.jpg",
-        "name": "Beef Stake",
-        "price": 25
+        "name": "Beef Steak",
+        "price": 25,
+        "details": "Place sliced beef in a large bowl. Whisk together lemon juice, soy sauce, sugar, salt, and pepper in a small bowl; pour over beef and toss to coat. Stir in cornstarch. Cover and refrigerate for 1 hour to overnight. Heat vegetable oil in a large skillet over medium heat.Remove beef slices from marinade, shaking to remove any excess liquid. Discard marinade. Working in batches, fry beef slices in hot oil until they start to firm and are reddish-pink and juicy in the center, 2 to 4 minutes per side. Transfer beef slices to a serving platter. Heat olive oil in a small skillet over medium heat. Cook and stir onion and garlic in hot oil until onion is golden brown, 5 to 7 minutes; spoon over beef slices."
     },
     {
         "id": 8,
         "img": "https://i.ibb.co/HdxG1W2/food8.jpg",
         "name": "Indian Dosa",
-        "price": 12
+        "price": 12, 
+        "details": "Dosa is the ever-popular South Indian breakfast of crispy crepes made with ground rice and lentil batter that is fermented. With just a handful of ingredients learn to make the classic Dosa recipe from scratch with my easy video and step-by-step photos. I also cover making your own dosa batter in a blender or mixer-grinder, tips on fermentation and cooking dosa to help you make the best dosa – crispy, soft and so good to dunk in a bowl of Coconut Chutney or piping hot Sambar. Dosa also called as Dosai (in Tamil language) is a famous and popular South Indian breakfast or snack in India as well in the rest of the world. Dosa are basically crispy or soft crepes made with ground and fermented lentil and rice batter. To make the batter, first the lentils and rice are soaked in water for 4 to 5 hours. They are then ground separately to a fine consistency. Then both the lentil batter and the rice batter are mixed with salt in a wide bowl or pan. This batter is then allowed to ferment overnight or for 8 to 9 hours. After the batter is fermented, it increases in volume, has a pleasant fermented aroma and a slightly sour taste. A well-fermented batter makes the best dosa. You will also see many tiny air-pockets in the batter."
     },
     {
         "id": 9,
         "img": "https://i.ibb.co/KXvCtHF/food9.jpg",
         "name": "Corn Soup",
-        "price": 10
+        "price": 10,
+        "details": "With just a few simple ingredients – fresh corn on the cob, chicken broth, shallots, butter, and herbs – this corn soup has an intense corn flavor that tastes just like summer. It’s delicious as is but also easily adapted: substitute your favorite herbs, top it with fresh chopped tomatoes or red bell peppers, or swirl in some heavy cream to make it richer. To begin, remove the husks and silks from the corn and set one ear of corn aside. Use a knife to cut the kernels off of the remaining 5 cobs, then break the scraped cobs in half. Set aside. Melt the butter in a large pot over medium-low heat and add the shallots. Cook, stirring often, until soft and translucent, 8-10 minutes. Add the chicken stock, corn kernels, broken cobs, whole ear of corn, salt, and pepper to the pot. Bring to a boil, then reduce the heat to medium-low and cook uncovered for 10 minutes. Remove the whole ear of corn and set aside to cool. Cook the soup for 10 minutes more, then remove the broken cobs from the pot and discard. Use a handheld immersion blender to purée the soup until very smooth. Be patient; it takes a while. Place a fine mesh sieve over a large bowl and pass the soup through, using a back of a ladle to push the soup through in circular motions. Discard the fibers and bits of kernels in the sieve."
     }
 ]
