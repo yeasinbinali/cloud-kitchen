@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import FoodContainer from "./FoodContainer/FoodContainer";
 
 const Foods = () => {
@@ -13,11 +14,14 @@ const Foods = () => {
       <h2 className="text-4xl text-center font-bold my-5">Foods</h2>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 px-5'>
           {
-              foods.map(food => <FoodContainer
-                key = {food.id}
-                food = {food}
-              ></FoodContainer>)
+            foods && foods.slice(0, 3).map(food => <FoodContainer
+              key = {food.id}
+              food = {food}
+            ></FoodContainer>)
           }
+      </div>
+      <div className='text-center my-10'>
+        <button className="btn btn-primary"><Link to='/allFoods'>Show More 3+</Link></button>
       </div>
     </div>
   );
