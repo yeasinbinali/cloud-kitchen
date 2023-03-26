@@ -7,8 +7,9 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <hr className='mt-3 bg-orange-900'></hr>
+            <hr className='mt-3'></hr>
             <Outlet></Outlet>
+            <hr className='mt-10'></hr>
             <Footer></Footer>
         </div>
     );

@@ -61,7 +61,7 @@ const Header = () => {
       </div>
       <div className="navbar-end">
         <button className="btn btn-outline btn-primary">
-          <Link to="/allFoods">All Foods</Link>
+          <Link to="/about">About us</Link>
         </button>
       </div>
     </div>
