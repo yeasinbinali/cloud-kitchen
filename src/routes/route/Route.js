@@ -1,9 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../layout/Main';
+import About from '../../pages/About/About';
 import AllFoods from '../../pages/AllFoods/AllFoods';
 import Home from '../../pages/Home/Home/Home';
 import Login from '../../pages/Login/Login';
 import MyReviews from '../../pages/MyReviews/MyReviews';
+import ReviewForm from '../../pages/ReviewForm/ReviewForm';
 import Signup from '../../pages/Signup/Signup';
 
 
@@ -21,8 +23,19 @@ export const router = createBrowserRouter([
                 element: <AllFoods></AllFoods>
             },
             {
+                path: '/reviewForm/:id',
+                element: <ReviewForm></ReviewForm>,
+                loader: async (params) => {
+                    return fetch(`http://localhost:5000/foods/${params.id}`)
+                }
+            },
+            {
                 path: '/reviews',
                 element: <MyReviews></MyReviews>
+            },
+            {
+                path: '/about',
+                element: <About></About>
             },
             {
                 path: '/signup',

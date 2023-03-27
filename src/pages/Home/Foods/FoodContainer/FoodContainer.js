@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const FoodContainer = ({ food }) => {
-  const { id, name, img, details, price } = food;
+  const { _id, name, img, details, price } = food;
   return (
     <div className="card w-80 h-80 bg-base-100 shadow-xl image-full mx-auto">
       <figure>
@@ -13,8 +13,8 @@ const FoodContainer = ({ food }) => {
         <p>{`${details.slice(0, 100)} ..`}</p>
         <p className='text-2xl font-bold'>Price: ${price}</p>
         <div className="card-actions justify-between">
-          <button className="btn btn-warning"><Link to={`/review/${id}`}>Review</Link></button>
-          <button className="btn btn-warning btn-outline"><Link to={`/foods/${id}`}>Details</Link></button>
+          <button className="btn btn-warning"><Link to={`/review/${_id}`}>Review</Link></button>
+          <button className="btn btn-warning btn-outline"><Link to={`/foods/${_id}`}>Details</Link></button>
         </div>
       </div>
     </div>

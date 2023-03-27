@@ -13,7 +13,7 @@ const Banner = () => {
           food.
         </p>
         <button className="btn btn-primary">
-          <Link to="/allServices">Reviews</Link>
+          <Link to="/reviews">Reviews</Link>
         </button>
       </div>
       <div>
