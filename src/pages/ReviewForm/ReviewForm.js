@@ -17,7 +17,7 @@ const ReviewForm = () => {
                 <input type="text" defaultValue={`$${price}`} className="input input-bordered w-full max-w-xs" readOnly/>
             </div>
             <div>
-                <textarea className="textarea textarea-bordered w-full md:max-w-xl max-w-xs text-base" placeholder="Please write down your review"></textarea>
+                <textarea className="textarea textarea-bordered w-full md:max-w-xl max-w-xs text-base" placeholder="Please write down your review here"></textarea>
             </div>
             <Link><button className="btn btn-primary mt-3">Submit</button></Link>
         </form>
