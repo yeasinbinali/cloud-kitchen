@@ -14,7 +14,7 @@ const FoodContainer = ({ food }) => {
         <p className='text-2xl font-bold'>Price: ${price}</p>
         <div className="card-actions justify-between">
           <Link to={`/reviewform/${_id}`}><button className="btn btn-warning">Review</button></Link>
-          <button className="btn btn-warning btn-outline"><Link>Details</Link></button>
+          <Link to={`/detailsfood/${_id}`}><button className="btn btn-warning btn-outline">Details</button></Link>
         </div>
       </div>
     </div>

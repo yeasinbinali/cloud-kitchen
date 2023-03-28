@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const ReviewForm = () => {
-    const {_id, img, name, price, details} = useLoaderData();
+    const {_id, name, price} = useLoaderData();
     
     return (
         <form className='text-center'>

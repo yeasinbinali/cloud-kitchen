@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../layout/Main';
 import About from '../../pages/About/About';
 import AllFoods from '../../pages/AllFoods/AllFoods';
+import DetailsFood from '../../pages/DetailsFood/DetailsFood';
 import Home from '../../pages/Home/Home/Home';
 import Login from '../../pages/Login/Login';
 import MyReviews from '../../pages/MyReviews/MyReviews';
@@ -25,6 +26,13 @@ export const router = createBrowserRouter([
             {
                 path: '/reviewform/:id',
                 element: <ReviewForm></ReviewForm>,
+                loader: async ({params}) => {
+                    return fetch(`http://localhost:5000/foods/${params.id}`)
+                }
+            },
+            {
+                path: '/detailsfood/:id',
+                element: <DetailsFood></DetailsFood>,
                 loader: async ({params}) => {
                     return fetch(`http://localhost:5000/foods/${params.id}`)
                 }
