@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../images/kitchenLogo.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/UserContext";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+    .then()
+    .catch((error) => console.error(error))
+  }
+
   return (
     <div className="navbar bg-orange-50">
       <div className="dropdown">
@@ -32,12 +41,20 @@ const Header = () => {
           <li>
             <Link to="/reviews">Reviews</Link>
           </li>
-          <li>
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          {user?.uid ? (
+            <li>
+              <button onClick={handleLogout} className='bg-slate-50'>Logout</button>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/signup">Signup</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-start">
@@ -51,12 +68,20 @@ const Header = () => {
           <li>
             <Link to="/reviews">Reviews</Link>
           </li>
-          <li>
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          {user?.uid ? (
+            <li>
+              <button onClick={handleLogout} className='bg-slate-50'>Logout</button>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/signup">Signup</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
