@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
 
 const Login = () => {
+  const {signIn} = useContext(AuthContext);
+
+  const handleLogin = event => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+    .then((result) => {
+      const user = result.user;
+      console.log(user)
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
   return (
-    <div className="hero py-10">
+    <form onSubmit={handleLogin} className="hero py-10">
       <div className="hero-content grid md:grid-cols-2 gap-20">
         <div className="lg:w-96 md:w-80">
           <img src={login} alt="" />
@@ -44,7 +62,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
