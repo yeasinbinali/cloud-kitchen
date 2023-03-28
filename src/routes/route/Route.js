@@ -23,9 +23,9 @@ export const router = createBrowserRouter([
                 element: <AllFoods></AllFoods>
             },
             {
-                path: '/reviewForm/:id',
+                path: '/reviewform/:id',
                 element: <ReviewForm></ReviewForm>,
-                loader: async (params) => {
+                loader: async ({params}) => {
                     return fetch(`http://localhost:5000/foods/${params.id}`)
                 }
             },

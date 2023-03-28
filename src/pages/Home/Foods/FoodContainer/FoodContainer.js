@@ -13,8 +13,8 @@ const FoodContainer = ({ food }) => {
         <p>{`${details.slice(0, 100)} ..`}</p>
         <p className='text-2xl font-bold'>Price: ${price}</p>
         <div className="card-actions justify-between">
-          <button className="btn btn-warning"><Link to={`/review/${_id}`}>Review</Link></button>
-          <button className="btn btn-warning btn-outline"><Link to={`/foods/${_id}`}>Details</Link></button>
+          <Link to={`/reviewform/${_id}`}><button className="btn btn-warning">Review</button></Link>
+          <button className="btn btn-warning btn-outline"><Link>Details</Link></button>
         </div>
       </div>
     </div>
