@@ -1,4 +1,5 @@
 import React from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { useLoaderData } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,11 @@ const DetailsFood = () => {
     <div className="border lg:w-1/2 md:1/3 mx-auto p-5 mt-5">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <img className="w-16 h-16 rounded-full" src={img} alt=""></img>
+          <PhotoProvider>
+            <PhotoView src={img}>
+            <img className="w-16 h-16 rounded-full" src={img} alt=""></img>
+            </PhotoView>
+          </PhotoProvider>
           <div className="ml-3">
             <h5 className="font-bold">{name}</h5>
             <h5>Price: ${price}</h5>

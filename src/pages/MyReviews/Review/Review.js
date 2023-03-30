@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { AuthContext } from "../../../context/UserContext";
 
 const Review = ({ review }) => {
@@ -6,15 +7,21 @@ const Review = ({ review }) => {
   const { _id, reviewerName, image, price, message, title } = review;
 
   return (
-    <div className="border md:w-1/2 mx-auto my-5">
+    <div className="border md:w-1/2 mx-auto my-5 rounded">
       <div className='flex justify-between items-center p-2'>
         <div className="flex">
-          <img className="w-12 h-12 rounded-full" src={image} alt="" />
+          <div>
+              <PhotoProvider>
+                  <PhotoView src={image}>
+                    <img className="w-12 h-12 rounded-full" src={image} alt="" />
+                  </PhotoView>
+              </PhotoProvider>
+          </div>
           <div>
             <h5>
               <b>{reviewerName}</b>
             </h5>
-            <small><b>{user?.email}</b></small>
+            <h5><b>{user?.email}</b></h5>
           </div>
         </div>
         <div>
@@ -24,7 +31,6 @@ const Review = ({ review }) => {
       <hr></hr>
       <div className='p-2'>
         <p><b>{title} | {price}</b></p>
-        {/* <small><b>Price: {price}</b></small> */}
         <p>{message}</p>
       </div>
     </div>

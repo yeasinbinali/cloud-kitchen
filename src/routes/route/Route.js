@@ -8,6 +8,7 @@ import Login from '../../pages/Login/Login';
 import MyReviews from '../../pages/MyReviews/MyReviews';
 import ReviewForm from '../../pages/ReviewForm/ReviewForm';
 import Signup from '../../pages/Signup/Signup';
+import PrivateRoute from '../privateRoute/PrivateRoute';
 
 
 export const router = createBrowserRouter([
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/reviewform/:id',
-                element: <ReviewForm></ReviewForm>,
+                element: <PrivateRoute><ReviewForm></ReviewForm></PrivateRoute>,
                 loader: async ({params}) => {
                     return fetch(`http://localhost:5000/foods/${params.id}`)
                 }
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/reviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: '/about',
