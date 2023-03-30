@@ -60,6 +60,13 @@ const Header = () => {
       <div className="navbar-start">
         <img className="lg:w-32 md:w-24 w-16" src={logo} alt=""></img>
       </div>
+      <div className='text-center'>
+        {
+          user?.emailVerified ? 
+          <p>{user?.email}</p>
+          : ''
+        }
+      </div>
       <div className="navbar-end hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
