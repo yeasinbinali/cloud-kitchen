@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Navigate, useLocation } from 'react-router';
 import { AuthContext } from '../../context/UserContext';
 
@@ -7,7 +8,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 
     if(loading){
-        return <progress className="progress w-56 mx-auto"></progress>
+        return toast.loading('Loading...');
     }
 
     if(user && user.uid){

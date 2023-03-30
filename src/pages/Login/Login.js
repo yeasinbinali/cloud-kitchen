@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
@@ -19,12 +20,13 @@ const Login = () => {
     signIn(email, password)
     .then((result) => {
       const user = result.user;
-      console.log(user)
       form.reset();
       navigate(from, { replace: true });
+      toast.success('Login successfully')
     })
     .catch((error) => {
-      console.log(error);
+      const errorMessage = error.message;
+      toast.error(errorMessage);
     })
   }
   return (

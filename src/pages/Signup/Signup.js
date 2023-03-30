@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
@@ -17,12 +18,13 @@ const Signup = () => {
     createUser(email, password)
     .then((result) => {
       const user = result.user;
-      console.log(user)
       navigate('/');
       form.reset();
+      toast.success('User created successfully');
     })
     .catch((error) => {
-      console.log(error);
+      const errorMessage = error.message;
+      toast.error(errorMessage);
     })
   }
   return (
@@ -61,7 +63,7 @@ const Signup = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="password"
                 name='password'
                 className="input input-bordered"
