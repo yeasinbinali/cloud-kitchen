@@ -26,6 +26,7 @@ const UserContext = ({children}) => {
     }
 
     const signInGoogle = () => {
+        setLoading(true);
         return signInWithPopup(Auth, googleProvider)
     }
 
