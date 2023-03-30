@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { AuthContext } from "../../../context/UserContext";
 
-const Review = ({ review }) => {
+const Review = ({ review, handleReviewDelete }) => {
   const { user } = useContext(AuthContext);
   const { _id, reviewerName, image, price, message, title } = review;
 
@@ -25,7 +25,7 @@ const Review = ({ review }) => {
           </div>
         </div>
         <div>
-            <button className='btn btn-ghost'>X</button>
+            <button onClick={() => handleReviewDelete(_id)} className='btn btn-ghost'>X</button>
         </div>
       </div>
       <hr></hr>

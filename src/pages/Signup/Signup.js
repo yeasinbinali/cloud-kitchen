@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
 
