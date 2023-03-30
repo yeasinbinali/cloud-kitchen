@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import toast from 'react-hot-toast';
 import { Navigate, useLocation } from 'react-router';
 import { AuthContext } from '../../context/UserContext';
 

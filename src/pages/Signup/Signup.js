@@ -11,7 +11,6 @@ const Signup = () => {
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -24,7 +23,6 @@ const Signup = () => {
 
     createUser(email, password)
       .then((result) => {
-        const user = result.user;
         emailVerification();
         form.reset();
       })
