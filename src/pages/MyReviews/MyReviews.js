@@ -5,7 +5,6 @@ import Review from './Review/Review';
 
 const MyReviews = () => {
     const [reviews, setReviews] = useState([]);
-    const [displayReviews, setDisplayReviews] = useState(reviews);
     const {user} = useContext(AuthContext)
 
     const handleReviewDelete = (id) => {
@@ -18,8 +17,6 @@ const MyReviews = () => {
             .then(data => {
                 if(data.deletedCount > 0){
                     toast.success('Deleted successfully')
-                    const remaining = reviews.filter(rvw => rvw._id !== id);
-                    setDisplayReviews(remaining);
                 }
             })
         }
@@ -32,13 +29,13 @@ const MyReviews = () => {
     return (
         <div>
             {
-                displayReviews.length === 0 ?
+                reviews.length === 0 ?
                 <h2 className='text-2xl text-center font-bold my-2'>There is no review</h2>
                 : 
-                <h2 className='text-2xl text-center font-bold my-2'>Total reviews: {displayReviews.length}</h2>
+                <h2 className='text-2xl text-center font-bold my-2'>Total reviews: {reviews.length}</h2>
             }
             {
-                displayReviews.map(review => <Review
+                reviews.map(review => <Review
                     review = {review}
                     key = {review._id}
                     handleReviewDelete = {handleReviewDelete}

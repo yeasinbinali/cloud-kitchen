@@ -8,12 +8,12 @@ const Review = ({ review, handleReviewDelete }) => {
 
   return (
     <div className="border md:w-1/2 mx-auto my-5 rounded">
-      <div className='flex justify-between items-center p-2'>
+      <div className='flex justify-between items-center p-2 bg-pink-100'>
         <div className="flex">
           <div>
               <PhotoProvider>
                   <PhotoView src={image}>
-                    <img className="w-12 h-12 rounded-full" src={image} alt="" />
+                    <img className="w-12 h-12 rounded-full mr-2" src={image} alt="" />
                   </PhotoView>
               </PhotoProvider>
           </div>

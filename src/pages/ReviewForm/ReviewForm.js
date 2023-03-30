@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import toast from 'react-hot-toast';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 import { AuthContext } from '../../context/UserContext';
 
 const ReviewForm = () => {
     const {_id, name, price} = useLoaderData();
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleReviewForm = event => {
         event.preventDefault();
@@ -37,7 +37,7 @@ const ReviewForm = () => {
         .then(data => {
             if(data.acknowledged){
                 form.reset();
-                toast.success('Review submitted successfully');
+                navigate('/reviews')
             }
         })
         .catch(err => console.error(err))
@@ -52,7 +52,7 @@ const ReviewForm = () => {
                 <input name='image' type="text" placeholder="Your Image URL" className="input input-bordered w-full max-w-xs" required/>
             </div>
             <div className='my-1'>
-                <input name='email' defaultValue={user?.email} type="text" placeholder="Email" className="input input-bordered w-full max-w-xs  md:mr-1 mb-1" />
+                <input name='email' defaultValue={user?.email} type="text" placeholder="Email" className="input input-bordered w-full max-w-xs  md:mr-1 mb-1" readOnly/>
                 <input name='price' type="text" defaultValue={`$${price}`} className="input input-bordered w-full max-w-xs" readOnly/>
             </div>
             <div>
