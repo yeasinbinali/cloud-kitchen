@@ -6,7 +6,7 @@ const Foods = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/foods")
+    fetch("https://cloud-kitchen-server-blue.vercel.app/foods")
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);
