@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext);
+  const {signIn, signInGoogle} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,15 +20,33 @@ const Login = () => {
     signIn(email, password)
     .then((result) => {
       const user = result.user;
-      form.reset();
-      navigate(from, { replace: true });
-      toast.success('Login successfully')
+      if(user?.emailVerified){
+        form.reset();
+        navigate(from, { replace: true });
+        toast.success('Login successfully')
+      }else{
+        toast.error('Email is not verified');
+      }
     })
     .catch((error) => {
       const errorMessage = error.message;
       toast.error(errorMessage);
     })
   }
+
+  const handleGoogleSignIn = () => {
+    signInGoogle()
+    .then((result) => {
+      const user = result.user;
+      navigate(from, { replace: true });
+      toast.success(`Login successfully ${user?.email}`)
+    })
+    .catch(error => {
+      const errorMessage = error.message;
+      toast.error(errorMessage);
+    })
+  }
+
   return (
     <form onSubmit={handleLogin} className="hero py-10">
       <div className="hero-content grid md:grid-cols-2 gap-20">
@@ -70,6 +88,7 @@ const Login = () => {
             </div>
             <p className='text-center mt-4'>New to Cloud Kitchen? <Link className='text-red-900' to='/signup'>Signup</Link></p>
           </div>
+          <button onClick={handleGoogleSignIn} className='btn btn-warning btn-active'>Google</button>
         </div>
       </div>
     </form>

@@ -5,28 +5,34 @@ import { AuthContext } from "../../context/UserContext";
 import login from "../../images/signIn&Out/login&signup.svg";
 
 const Signup = () => {
-  const {createUser} = useContext(AuthContext);
-  const navigate = useNavigate()
+  const { createUser, verifyEmail } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const handleSignUp = event => {
+  const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
 
+    const emailVerification = () => {
+      verifyEmail().then(() => {
+        toast.success("Check your mail and Verify. Then, Login!");
+        navigate("/login");
+      });
+    };
+
     createUser(email, password)
-    .then((result) => {
-      const user = result.user;
-      navigate('/');
-      form.reset();
-      toast.success('User created successfully');
-    })
-    .catch((error) => {
-      const errorMessage = error.message;
-      toast.error(errorMessage);
-    })
-  }
+      .then((result) => {
+        const user = result.user;
+        emailVerification();
+        form.reset();
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast.error(errorMessage);
+      });
+  };
   return (
     <form onSubmit={handleSignUp} className="hero py-10">
       <div className="hero-content grid md:grid-cols-2 gap-20">
@@ -43,7 +49,7 @@ const Signup = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                name='name'
+                name="name"
                 className="input input-bordered"
               />
             </div>
@@ -54,7 +60,7 @@ const Signup = () => {
               <input
                 type="text"
                 placeholder="email"
-                name='email'
+                name="email"
                 className="input input-bordered"
               />
             </div>
@@ -65,14 +71,19 @@ const Signup = () => {
               <input
                 type="password"
                 placeholder="password"
-                name='password'
+                name="password"
                 className="input input-bordered"
               />
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Signup</button>
             </div>
-            <p className='text-center mt-4'>Already have an account? <Link className='text-red-900' to='/login'>Login</Link></p>
+            <p className="text-center mt-4">
+              Already have an account?{" "}
+              <Link className="text-red-900" to="/login">
+                Login
+              </Link>
+            </p>
           </div>
         </div>
       </div>

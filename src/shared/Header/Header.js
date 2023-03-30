@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div className="navbar bg-orange-50">
       <div className="dropdown">
-        <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <label tabIndex={0} className="btn btn-ghost md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -60,7 +60,7 @@ const Header = () => {
       <div className="navbar-start">
         <img className="lg:w-32 md:w-24 w-16" src={logo} alt=""></img>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
             <Link to="/">Home</Link>
@@ -68,7 +68,7 @@ const Header = () => {
           <li>
             <Link to="/reviews">Reviews</Link>
           </li>
-          {user?.uid ? (
+          {user?.emailVerified ? (
             <li>
               <button onClick={handleLogout} className='bg-slate-50'>Logout</button>
             </li>
@@ -84,11 +84,11 @@ const Header = () => {
           )}
         </ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <button className="btn btn-outline btn-primary">
           <Link to="/about">About us</Link>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

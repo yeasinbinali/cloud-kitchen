@@ -18,7 +18,7 @@ const Foods = () => {
           foods
             .slice(0, 3)
             .map((food) => (
-              <FoodContainer key={food.id} food={food}></FoodContainer>
+              <FoodContainer key={food._id} food={food}></FoodContainer>
             ))}
       </div>
       <div className="text-center my-10">
